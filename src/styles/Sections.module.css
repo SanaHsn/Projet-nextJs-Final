@@ -1,0 +1,267 @@
+
+
+/* Section 1 ********************* */
+.bigSale{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    gap: 40px;
+}
+.sale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 180px;
+    box-shadow: 2px 2px 14px 2px rgb(220, 218, 218);
+    border-radius: 5px;
+}
+.imgSale{
+    width: 250px;
+    height: 100%;
+}
+.textSale{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+.textSale h5{
+    font-weight: bolder;
+}
+.textSale h6 , .textSale span{
+    color: rgb(3, 150, 52);
+    font-weight: bolder;
+}
+
+/* Section 2 Cards ***************************** */
+.bigCard{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+.titleCard{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;;
+}
+.card{
+    width: 240px;
+    height: 400px;
+    box-shadow: 2px 6px 20px 0px rgb(112, 112, 112) ;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
+.imgBook{
+    width: 100%;
+    height: 200px;
+}
+
+.infos{
+    padding: 10px;
+}
+
+.infos p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.btnCarte{
+    display: none;
+    width: 220px;
+    margin-top: 30px;
+    margin: 0;
+    margin-top: 10px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    background-color: rgba(3, 102, 36, 0.83);
+    padding: 8px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.zoom{
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    z-index: 5;
+    color: white;
+}
+.iconZoom{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    background-color: rgba(3, 102, 36, 0.83);
+    border-radius: 50%;
+    color: white;
+}
+
+.card:hover .zoom{
+    display: block;
+    cursor: pointer;
+}
+.card:hover .btnCarte{
+    display: flex;
+}
+.card:hover .infos p{
+    margin-bottom: 0;
+}
+
+/* Section 3 *************************** */
+.bigSec3{
+    width: 100%;
+    padding: 50px 0px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+.sec3{
+    width: 65%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 2px 20px 2px rgb(177, 177, 177);
+    gap: 30px;
+}
+.imageS3{
+    width: 500px;
+    height: 180px;
+    border-radius: 5px;
+}
+.iconReseau {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(3, 102, 36, 0.83);
+    border-radius: 50%;
+    color: white;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.inputS3{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    padding: 10px;
+    background-color: rgba(242, 242, 242, 0.672);
+    border-radius: 5px;
+    gap: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 14px 2px rgb(220, 218, 218);
+    border-radius: 5px;
+}
+.inputBtn{
+    display: flex;
+}
+.inputBtn button{
+    width: 100px;
+    border: none;
+    background-color: rgba(3, 102, 36, 0.83);
+    color: white;
+    border-radius: 5px;
+}
+.titreS3 p{
+    margin-bottom: 20px;
+}
+.LoadMore{
+    margin: auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(3, 102, 36, 0.83);
+    width: 120px;
+    padding: 8px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+
+    .inputS3{
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .bigSale{
+        flex-wrap: wrap;
+    }
+    .sec3{
+        width: 50%;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .imageS3{
+        width: 300px;
+    }
+    .icons{
+        justify-content: center;
+    }
+    .btnCarte{
+        display: flex;
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+    }
+    .zoom{
+        display: block;
+    }
+    
+}
+@media only screen and (max-width: 425px){
+    .sale{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .imgSale{
+        width: 100%;
+    }
+    .sec3{
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 375px){
+    .inputBtn{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .inputBtn button{
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .textSale h6 {
+        font-size: 20px;
+    }
+}

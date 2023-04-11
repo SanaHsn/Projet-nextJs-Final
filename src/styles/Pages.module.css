@@ -1,0 +1,68 @@
+
+.bigAll{
+    display: flex;
+    background-color: white;
+    padding: 4rem;
+}
+.All{
+    display: flex;
+    /* gap: 10px; */
+    margin-top: 20px;
+    justify-content: center;
+}
+.search{
+    width: 250px;
+    padding: 12px;
+    background-color: rgba(220, 220, 220, 0.347);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.categorie, .linkAll{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.selectAll{
+    margin-top: 15px;
+}
+.select{
+    width: 270px;
+    padding: 5px;
+    margin-top: 10px;
+    outline: none;
+}
+.linkAll p:hover{
+    color: rgba(9, 146, 55, 0.83);
+
+}
+.liftreAZ{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+.leftFiltre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.gridJustify{
+    border: 1px solid rgb(147, 147, 147);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+}
+.gridJustify:hover{
+    color:  rgb(3, 97, 3);
+    border: 1px solid rgb(3, 97, 3);
+
+}

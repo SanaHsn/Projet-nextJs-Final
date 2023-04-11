@@ -1,0 +1,90 @@
+.navbar{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    background-color: white;
+    /* position:fixed; */
+    z-index: 60;
+    /* margin-bottom: 50px; */
+}
+.AiFillHeart{
+    display: none;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    padding: 10px;
+    background-color: rgba(220, 220, 220, 0.737);
+    border-radius: 5px;
+    gap: 10px;
+
+}
+.search input{
+    border: none;
+    outline: none;
+    background-color: rgba(242, 242, 242, 0);
+    width: 500px;
+}
+.tele{
+    display: flex;
+    gap: 10px;
+}
+.tele p{
+    margin-right: 20px;
+}
+.FiAlignLeft{
+    font-size: 35px;
+    cursor: pointer;
+}
+.AiFillHeart{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .search{
+        width: 250px;
+    }
+    .search input{
+        width: 250px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 425px){
+    .tele{
+        position: absolute;
+        top: 25px;
+        right: 0;
+    
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+    .search{
+        margin: auto;
+        margin-top: 40px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .tele{
+        display: none;
+    }
+    .AiFillHeart{
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 0;
+    }
+}
