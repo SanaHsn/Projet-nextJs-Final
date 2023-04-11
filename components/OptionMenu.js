@@ -2,10 +2,14 @@ import Link from 'next/link';
 import styles from '../src/styles/SlideBar.module.css';
 import { RxCross2 } from "react-icons/rx";
 
-export default function OptionMenu({active, closeFunction}) {
+export default function OptionMenu({active, setOption,setNav}) {
     console.log('tesst ');
+    const closeFunction =()=> {
+        setOption(false)
+        setNav(true)
+    }
     return(
-        <>
+    <>
         <div className={!active?styles.modal+' '+styles.off:styles.modal} onClick={closeFunction}>
         
         </div>
@@ -15,10 +19,10 @@ export default function OptionMenu({active, closeFunction}) {
                     <h3 className={styles.quit} onClick={closeFunction}><RxCross2/></h3>
                 </div>
                 <div className={styles.content}>
-                    <Link href='/'>Bookshelf Minimal</Link>
-                    <Link href='/'>Bookshelf Modern</Link>
-                    <Link href='/'>Bookshelf Classic</Link>
-                    <Link href='/allBook'> All Book</Link>
+                    <Link onClick={closeFunction} href='/'>Bookshelf Minimal</Link>
+                    <Link onClick={closeFunction} href='/'>Bookshelf Modern</Link>
+                    <Link onClick={closeFunction} href='/'>Bookshelf Classic</Link>
+                    <Link onClick={closeFunction} href='/allBook'> All Book</Link>
                 </div>
                 
             </div>

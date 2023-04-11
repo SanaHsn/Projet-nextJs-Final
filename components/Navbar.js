@@ -7,7 +7,7 @@ import styles from '../src/styles/Navbar.module.css';
 
 
 
-export default function Sidebar({optionFonction, optionFonction2}) {
+export default function Navbar({optionFonction, optionFonction2, setInput, input}) {
 
     return (
         <nav className={styles.navbar}>
@@ -18,7 +18,7 @@ export default function Sidebar({optionFonction, optionFonction2}) {
             </div>
             <div className={styles.search}>
                 <FaSistrix />
-                <input type="" name=""  placeholder= "Search your book here"/>
+                <input value={input} onChange={(e)=>setInput(e.target.value)} placeholder= "Search your book here"/>
             </div>
             <div className={styles.tele}>
                 <FiPhoneCall/>
