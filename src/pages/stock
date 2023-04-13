@@ -1,0 +1,126 @@
+import { createSlice } from "@reduxjs/toolkit"
+
+export const loginSlice = createSlice({
+	name:'login',
+	initialState: {connected:false, 
+					users:[{name:'sanae', email:'sana@gmail.com', mdp:'123', fav:[]}], 
+					connectedUser:{} },
+        
+
+	reducers : {
+		setConected:(state, action)=>{state.connected = action.payload},
+        setUser:(state, action)=>{state.connectedUser = action.payload},
+        signIn: (state, action)=>{
+            state.users.push({name:action.payload.name, email:action.payload.email, mdp:action.payload.mdp, fav:[] }) 
+        },
+        // addFav: (state, action) =>{
+        //     state.connectedUser.fav.push(action.payload)
+        //     for (let index = 0; index < users.length; index++) {
+        //         if (users[index].email == connectedUser.email) {
+        //             state.users[index].fav.push(action.payload)
+        //         }
+                
+        //     }
+        // },
+        // removeFav: (state, action)=>{
+        //     let i = 0
+        //     for (let index = 0; index < state.connectedUser.fav.length; index++) {
+        //         if (state.connectedUser.fav[index].id == action.payload) {
+        //             state.connectedUser.fav.splice(index, 1)
+        //             i = index
+        //         }
+                
+        //     }
+        //     for (let index = 0; index < users.length; index++) {
+        //         if (users[index].email == connectedUser.email) {
+        //             state.users[index].fav.splice(i, 1)
+        //         }
+                
+        //     }
+        // }
+        
+    }
+
+})
+
+
+
+export const { setConected, setUser, signIn} = loginSlice.actions
+export default loginSlice.reducer;
+
+
+
+import style from '../src/styles/Sections.module.css'
+import Image from 'next/image.js';
+import Link from 'next/link.js';
+import { AiOutlineHeart } from "react-icons/ai";
+import { MdZoomOutMap } from "react-icons/md";
+import { useDispatch, useSelector } from 'react-redux'
+// import {removeFav, addFav} from "../store/features/accountSlice.js"
+
+
+
+export default function Section2({ book }) {
+
+    const dispatch = useDispatch();
+    // const login = useSelector((state) => state.login);
+    // console.log(login);
+    // // const connecter = useSelector((state) => state.login.connected);
+    // // const user = useSelector((state) => state.login.connectedUser);
+    const { title, edition, authors, image_url, id } = book;
+
+
+    function isInFav() { 
+        let result = false
+        if (connecter) {
+            user.fav.forEach(element => {
+                if (element.id == book.id) {
+                    result = true
+                }
+            });
+        }
+        return result;
+     }
+
+
+    function gestionLike() {
+        if (connecter) {
+            if (isInFav()) {
+                dispatch(removeFav(book.id))
+            }else{
+                dispatch(addFav(book))
+            }
+            console.log(user.fav);
+        }
+
+    }
+    
+    return (
+        <div>
+            <div className={style.card}>
+                <img className={style.imgBook} src={image_url} alt="" />
+                <div className={style.zoom}>
+                    <div onClick={gestionLike} className={style.iconZoom}>
+                        <AiOutlineHeart />
+                    </div>
+                    <div className={style.iconZoom}>
+                    <Link href={`/book/${id}`}><MdZoomOutMap /></Link>
+                        
+                    </div>
+                    
+                </div>
+                <div className={style.infos}>
+                    <h6>{title}</h6>
+                    <p>{edition}</p>
+                    <p>By: <b>{authors}</b></p>
+                    <p>Price: <b>$90</b></p>
+                    
+                    <button className={style.btnCarte} onClick={gestionLike}> <AiOutlineHeart/> Add to cart </button>
+                </div>
+            </div>
+    
+        </div>
+    )
+}
+
+

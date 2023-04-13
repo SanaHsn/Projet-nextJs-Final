@@ -4,6 +4,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { AiFillHeart } from "react-icons/ai";
 import Link from "next/link.js";
 import styles from '../src/styles/Navbar.module.css';
+// import {loginStart} from '../store/features/accountSlice.js'
 
 
 
@@ -25,9 +26,9 @@ export default function Navbar({optionFonction, optionFonction2, setInput, input
                 <p>+01234567890</p>
                 <AiFillHeart onClick={optionFonction2} />
             </div>
-            <div className={styles.AiFillHeart}>
+                <div className={styles.AiFillHeart}>
                 <AiFillHeart className={styles.AiFillHeart} onClick={optionFonction2} />
-            </div>
+            </div> 
 
         </nav>
     );

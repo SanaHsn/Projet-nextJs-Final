@@ -16,7 +16,7 @@ export default function Layout({children, index, setInput, input}) {
     return (
         <div className='layout'>
             <OptionLike active2={optionlike} closeFunction2={()=>setLikeOption(false)} />
-            <OptionMenu active={option} setOption={setOption} />
+            <OptionMenu active={option} closeFunction={()=>setOption(false)}/>
 
             {index?<Navbar optionFonction={()=>{setOption(true)}} optionFonction2={()=>{setLikeOption(true)}} input={input} setInput={setInput} />:
             <Navbar2 optionFonction={()=>{setOption(true)}} optionFonction2={()=>{setLikeOption(true) }} />}

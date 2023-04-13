@@ -10,19 +10,18 @@ import Layout from '../../components/Layout.js';
 
 
 
+
 export default function Home({products}) {
+
   const [visible, setVisible] = useState(4);
   const showMoreBook = ()=>{
     setVisible((prevValue)=> prevValue + 4);
-
   }
   
     //Search input 
+    const [input, setInput] =useState('') ;
 
-  
-        const [input, setInput] =useState('') ;
-        
-     
+ 
 
   return (
     <>
@@ -46,6 +45,7 @@ export default function Home({products}) {
             </div>
             <div className={style.cards}>
               {products.slice(0,visible).map((book) => (
+
                 book.title.toLowerCase().includes(input) ?
                 <Section2 key={book.id} book={book} /> :
                 null
