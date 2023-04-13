@@ -41,7 +41,6 @@ export default function Home({products}) {
             <div className={style.titleCard}>
               <span>BOOKS GALLERY</span>
               <h1>Popular Books</h1>
-              <hr />
             </div>
             <div className={style.cards}>
               {products.slice(0,visible).map((book) => (

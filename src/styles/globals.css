@@ -1,10 +1,11 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@800&family=Nunito:ital,wght@0,300;1,400;1,700&family=Outfit:wght@300;400;600&family=Philosopher:wght@400;700&family=Rubik:ital,wght@0,400;0,500;1,300&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@800&family=Nunito:ital,wght@0,300;1,400;1,700&family=Outfit:wght@300;400;600&family=Philosopher:wght@400;700&family=Rubik:ital,wght@0,400;0,500;1,300&family=Ubuntu&display=swap');
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Philosopher', sans-serif;
 }
 
 html,
@@ -12,6 +13,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: rgba(220, 220, 220, 0.737);
+  
 }
 
 body {
@@ -22,13 +24,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    font-family: 'Philosopher', sans-serif;
   }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
 hr{
   width: 200px;
   margin: auto;
@@ -37,16 +39,7 @@ hr{
 span{
   color: rgb(3, 150, 52);
 }
-/* Caroussel ************ */
 
-.carouse:hover .b_un{
-  transform: translateX(0);
-  opacity: 1;
-}
-.carouse:hover .b_deux{
-  transform: translateX(0);
-  opacity: 1;
-}
 .relative{
   padding: 80px;
   margin: auto;
@@ -68,4 +61,64 @@ h1, h2, h6, h3{
 }
 label{
   text-align: center;
+}
+/* Caroussel ************
+
+.carouse:hover .b_un{
+  transform: translateX(0);
+  opacity: 1;
+}
+.carouse:hover .b_deux{
+  transform: translateX(0);
+  opacity: 1;
+} */
+
+/* CAROUSEL  */
+.carousel-indicators button {
+  background-color: rgb(154, 154, 154) !important;
+  height: 15px !important;
+  width: 15px !important;
+  border-radius: 50% !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  transition: 0.4s ease !important;
+  margin-top: 100px;
+}
+
+.carousel-indicators .active {
+  width: 40px !important;
+  background-color: rgb(50, 143, 123) !important ;
+  border-radius: 15px !important;
+}
+
+.carousel-control-next-icon {
+  background-color: rgb(50, 143, 123) !important;
+  color: rgb(50, 143, 123);
+  border-radius: 50% !important;
+  height: 40px !important;
+  width: 40px !important;
+}
+
+.carousel-control-prev-icon {
+  background-color: rgb(50, 143, 123) !important;
+  color: rgb(50, 143, 123) !important ;
+  border-radius: 50% !important;
+  height: 40px !important;
+  width: 40px !important;
+}
+
+.carousel-control-prev {
+  opacity: 0 !important;
+}
+
+.carousel_carousel__RWPAh:hover .carousel-control-prev {
+  opacity: 0.9 !important;
+}
+
+.carousel-control-next {
+  opacity: 0 !important;
+}
+
+.carousel_carousel__RWPAh:hover .carousel-control-next {
+  opacity: 0.9 !important;
 }

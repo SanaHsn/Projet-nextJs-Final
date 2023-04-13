@@ -9,9 +9,9 @@
     position:fixed;
     z-index: 60;
 }
-.AiFillHeart{
+/* .AiFillHeart{
     display: none;
-}
+} */
 .logo{
     display: flex;
     justify-content: center;
@@ -43,6 +43,8 @@
 }
 .tele{
     display: flex;
+    justify-content: center;
+    /* align-items: center; */
     gap: 10px;
 }
 .tele p{

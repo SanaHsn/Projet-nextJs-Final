@@ -14,17 +14,17 @@ export default function allBookk() {
 
     const [data, setData] = useState([]);
     const [nbBook, setNbBook] = useState(0);
-    
-        useEffect(() => {
-            fetch("https://example-data.draftbit.com/books")
+
+    useEffect(() => {
+        fetch("https://example-data.draftbit.com/books")
             .then((response) => response.json())
             .then((data) => {
                 setData(data);
             });
-        }, []);
-        useEffect(() => {
-            setNbBook(data.length);
-        }, [data]);
+    }, []);
+    useEffect(() => {
+        setNbBook(data.length);
+    }, [data]);
     const [searchQuery, setSearchQuery] = useState('');
 
     const dispatch = useDispatch();
@@ -63,7 +63,7 @@ export default function allBookk() {
         setSortOrder(event.target.value);
     };
 
-   
+
 
     return (
         <Layout>
@@ -77,36 +77,17 @@ export default function allBookk() {
                             </div>
                             <h2>Category</h2>
                             <div className={style.linkAll}>
-                                <Link href="#">
-                                    <p onClick={() => setCategory('all')}>All</p>
-                                </Link>
-                                <Link href="#">
-                                    <p onClick={() => setCategory('Humor')}>Humor</p>
-                                </Link>
-                                <Link href="#">
-                                    <p onClick={() => setCategory('Childrens')}>Childrens</p>
-                                </Link>
-                                <Link href="#">
-                                    <p onClick={() => setCategory('Adventure')}>Adventure</p>
-                                </Link>
-                                <Link href="#">
-                                    <p onClick={() => setCategory('Romance')}>Romance</p>
-                                </Link>
-                                <Link href="#">
-                                    <p onClick={() => setCategory('Horror')}>Horror</p>
-                                </Link>
-                                <Link href="#">
-                                    <p onClick={() => setCategory('Classics')}>Classics</p>
-                                </Link>
-                                <Link href="#">
-                                    <p onClick={() => setCategory('Animals')}>Animals</p>
-                                </Link>
-                                <Link href="#">
-                                    <p onClick={() => setCategory('Inspirational')}>
-                                        Inspirational
-                                    </p>
-                                </Link>
 
+                                <p onClick={() => setCategory('all')}>All</p>
+                                <p onClick={() => setCategory('Humor')}>Humor</p>
+                                <p onClick={() => setCategory('Childrens')}>Childrens</p>
+                                <p onClick={() => setCategory('Adventure')}>Adventure</p>
+                                <p onClick={() => setCategory('Romance')}>Romance</p>
+                                <p onClick={() => setCategory('Horror')}>Horror</p>
+                                <p onClick={() => setCategory('Classics')}>Classics</p>
+                                <p onClick={() => setCategory('Animals')}>Animals</p>
+                                <p onClick={() => setCategory('Inspirational')}>Inspirational </p>
+                                
                             </div>
                             <div className={style.selectAll}>
                                 <h2>Author</h2>
