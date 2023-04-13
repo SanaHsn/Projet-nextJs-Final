@@ -1,15 +1,24 @@
 
 .bigAll{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
-    padding: 4rem;
+    padding: 8rem 5rem;
+
 }
 .All{
     display: flex;
-    /* gap: 10px; */
+    gap: 10px;
     margin-top: 20px;
     justify-content: center;
 }
+.divInput1{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
 .search{
     width: 250px;
     padding: 12px;
@@ -18,10 +27,18 @@
     outline: none;
     border: none;
 }
-.categorie, .linkAll{
+.categorie{
+    width: 300px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+}
+.linkAll{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
 }
 .selectAll{
     margin-top: 15px;
@@ -38,9 +55,8 @@
 }
 .liftreAZ{
     display: flex;
-    justify-content:space-around;
     align-items: center;
-    
+    gap: 200px;
 }
 .leftFiltre{
     display: flex;

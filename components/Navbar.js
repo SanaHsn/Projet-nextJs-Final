@@ -31,7 +31,7 @@ export default function Navbar({optionFonction, optionFonction2, setInput, input
                 <p>+01234567890</p>
                 {users == true ?
                 <div className={styles.AiFillHeart} ><AiFillHeart onClick={optionFonction2} /></div>
-                 : null
+                : null
                 }
             </div>
 

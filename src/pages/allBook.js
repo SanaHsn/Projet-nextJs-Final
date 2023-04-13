@@ -69,40 +69,11 @@ export default function allBookk() {
         <Layout>
             <>
                 <div className={style.bigAll}>
-                    <div className={style.All}>
-                        <div className={style.categorie}>
+                <div className={style.divInput1}>
                             <div>
                                 <input className={style.search} type="text" placeholder='Search' value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)} />
                             </div>
-                            <h2>Category</h2>
-                            <div className={style.linkAll}>
-
-                                <p onClick={() => setCategory('all')}>All</p>
-                                <p onClick={() => setCategory('Humor')}>Humor</p>
-                                <p onClick={() => setCategory('Childrens')}>Childrens</p>
-                                <p onClick={() => setCategory('Adventure')}>Adventure</p>
-                                <p onClick={() => setCategory('Romance')}>Romance</p>
-                                <p onClick={() => setCategory('Horror')}>Horror</p>
-                                <p onClick={() => setCategory('Classics')}>Classics</p>
-                                <p onClick={() => setCategory('Animals')}>Animals</p>
-                                <p onClick={() => setCategory('Inspirational')}>Inspirational </p>
-                                
-                            </div>
-                            <div className={style.selectAll}>
-                                <h2>Author</h2>
-                                <select className={style.select} name="" id="">
-                                    <option value="">All</option>
-                                    <option value="">Book Description</option>
-                                    <option value="">Fyodor Dostoyevsky</option>
-                                    <option value="">John Steinbeck</option>
-                                    <option value="">Bram Stoker</option>
-                                    <option value="">Aldous Huxley</option>
-                                    <option value="">William Goldman</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div className={style.leftFiltre}>
                             <div className={style.liftreAZ}>
                                 <div className={style.grid}>
                                     <div className={style.gridJustify}>
@@ -119,38 +90,69 @@ export default function allBookk() {
                                     <option value="z-a">(z-a)</option>
                                 </select>
                             </div>
-                            <div className={styles.cards}>
-                                {filteredData
-                                    .filter((book) =>
-                                        book.title && book.title.toLowerCase().includes(searchQuery.toLowerCase())
-                                    )
+                        </div>
+                    <div className={style.All}>
+                        
+                        <div className={style.categorie}>
 
-                                    .map((book) => (
+                            <h2>Category</h2>
+                            <div className={style.linkAll}>
 
-                                        <div key={book.id} className={styles.card}>
-                                            <img className={styles.imgBook} src={book.image_url} alt="" />
-                                            <div className={styles.zoom}>
-                                                <div className={styles.iconZoom}>
-                                                    <AiOutlineHeart onClick={() => handleIncrementerFav(book)} />
-                                                </div>
-                                                <div className={styles.iconZoom}>
-                                                    <Link href={`/book/${book.id}`}><MdZoomOutMap /></Link>
+                                <p onClick={() => setCategory('all')}>All</p>
+                                <p onClick={() => setCategory('Humor')}>Humor</p>
+                                <p onClick={() => setCategory('Childrens')}>Childrens</p>
+                                <p onClick={() => setCategory('Adventure')}>Adventure</p>
+                                <p onClick={() => setCategory('Romance')}>Romance</p>
+                                <p onClick={() => setCategory('Horror')}>Horror</p>
+                                <p onClick={() => setCategory('Classics')}>Classics</p>
+                                <p onClick={() => setCategory('Animals')}>Animals</p>
+                                <p onClick={() => setCategory('Inspirational')}>Inspirational </p>
 
-                                                </div>
-
-                                            </div>
-                                            <div className={styles.infos}>
-                                                <h6>{book.title}</h6>
-                                                <p>{book.edition}</p>
-                                                <p>By: <b>{book.authors}</b></p>
-                                                <p>Price: <b>$90</b></p>
-
-                                                <button className={styles.btnCarte} onClick={() => handleIncrementerFav(book)}> <AiOutlineHeart /> Add to cart </button>
-                                            </div>
-                                        </div>
-                                    )
-                                    )}
                             </div>
+                            <div className={style.selectAll}>
+                                <h2>Author</h2>
+                                <select className={style.select} name="" id="">
+                                    <option value="">All</option>
+                                    <option value="">Book Description</option>
+                                    <option value="">Fyodor Dostoyevsky</option>
+                                    <option value="">John Steinbeck</option>
+                                    <option value="">Bram Stoker</option>
+                                    <option value="">Aldous Huxley</option>
+                                    <option value="">William Goldman</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className={styles.cards}>
+                            {filteredData
+                                .filter((book) =>
+                                    book.title && book.title.toLowerCase().includes(searchQuery.toLowerCase())
+                                )
+                                .map((book) => (
+
+                                    <div key={book.id} className={styles.card}>
+                                        <img className={styles.imgBook} src={book.image_url} alt="" />
+                                        <div className={styles.zoom}>
+                                            <div className={styles.iconZoom}>
+                                                <AiOutlineHeart onClick={() => handleIncrementerFav(book)} />
+                                            </div>
+                                            <div className={styles.iconZoom}>
+                                                <Link href={`/book/${book.id}`}><MdZoomOutMap /></Link>
+
+                                            </div>
+
+                                        </div>
+                                        <div className={styles.infos}>
+                                            <h6>{book.title}</h6>
+                                            <p>{book.edition}</p>
+                                            <p>By: <b>{book.authors}</b></p>
+                                            <p>Price: <b>$90</b></p>
+
+                                            <button className={styles.btnCarte} onClick={() => handleIncrementerFav(book)}> <AiOutlineHeart /> Add to cart </button>
+                                        </div>
+                                    </div>
+                                )
+                                )}
                         </div>
                     </div>
                 </div>

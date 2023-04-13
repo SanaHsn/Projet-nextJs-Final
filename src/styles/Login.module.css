@@ -1,0 +1,44 @@
+/* Styles for the login form container */
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Styles for form groups (label and input) */
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+/* Styles for labels */
+.formGroup label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Styles for form inputs */
+.formControl {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 16px;
+}
+
+/* Styles for the submit button */
+.btn {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
