@@ -87,28 +87,33 @@ label{
 
 .carousel-indicators .active {
   width: 40px !important;
-  background-color: rgb(50, 143, 123) !important ;
+  background-color: rgba(3, 102, 36, 0.83) !important ;
   border-radius: 15px !important;
 }
 
 .carousel-control-next-icon {
-  background-color: rgb(50, 143, 123) !important;
-  color: rgb(50, 143, 123);
+  background-color: rgba(3, 102, 36, 0.83) !important;
+  color: rgba(3, 102, 36, 0.83);
   border-radius: 50% !important;
   height: 40px !important;
   width: 40px !important;
 }
 
 .carousel-control-prev-icon {
-  background-color: rgb(50, 143, 123) !important;
-  color: rgb(50, 143, 123) !important ;
+  background-color: rgba(3, 102, 36, 0.83) !important;
+  color: rgba(3, 102, 36, 0.83) !important ;
+  z-index: 20 !important;
+  position: absolute;
   border-radius: 50% !important;
   height: 40px !important;
   width: 40px !important;
 }
+.carou:hover + .carousel-control-prev{
+    opacity: 10;
+}
 
 .carousel-control-prev {
-  opacity: 0 !important;
+  opacity: 1 !important;
 }
 
 .carousel_carousel__RWPAh:hover .carousel-control-prev {
@@ -116,7 +121,7 @@ label{
 }
 
 .carousel-control-next {
-  opacity: 0 !important;
+  opacity: 1 !important;
 }
 
 .carousel_carousel__RWPAh:hover .carousel-control-next {

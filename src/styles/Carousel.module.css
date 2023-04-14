@@ -52,7 +52,7 @@
 
 .gauche button::before {
     content: "";
-    background: #5a8f7b;
+    background: rgba(3, 102, 36, 0.83);
     width: 120%;
     left: -10%;
     transform: skew(30deg);

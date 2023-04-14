@@ -143,7 +143,7 @@ export default function allBookk() {
 
                                         </div>
                                         <div className={styles.infos}>
-                                            <h6>{book.title}</h6>
+                                            <h5>{book.title}</h5>
                                             <p>{book.edition}</p>
                                             <p>By: <b>{book.authors}</b></p>
                                             <p>Price: <b>$90</b></p>

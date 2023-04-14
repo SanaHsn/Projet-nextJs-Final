@@ -29,7 +29,7 @@ export default function Section2({ book }) {
                     </div>
                 </div>
                 <div className={style.infos}>
-                    <h6>{title}</h6>
+                    <h5>{title}</h5>
                     <p>{edition}</p>
                     <p>By: <b>{authors}</b></p>
                     <p>Price: <b>$90</b></p>

@@ -40,6 +40,10 @@
     gap: 10px;
     cursor: pointer;
 }
+.linkAll p:hover{
+    color: rgba(9, 146, 55, 0.83);
+
+}
 .selectAll{
     margin-top: 15px;
 }
@@ -49,10 +53,7 @@
     margin-top: 10px;
     outline: none;
 }
-.linkAll p:hover{
-    color: rgba(9, 146, 55, 0.83);
 
-}
 .liftreAZ{
     display: flex;
     align-items: center;
@@ -81,4 +82,31 @@
     color:  rgb(3, 97, 3);
     border: 1px solid rgb(3, 97, 3);
 
+}
+
+@media only screen and (max-width: 1024px){
+    .divInput1{
+        margin-top: 50px;
+        gap: 80px;
+    }
+    .liftreAZ{
+        gap: 100px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .All{
+        flex-direction: column;
+    }
+    .divInput1{
+        display: block;
+    }
+    .linkAll{
+        flex-direction:row;
+    }
+}
+@media only screen and (max-width: 375px){
+    .bigAll{
+        padding: 0rem;
+    }
+  
 }

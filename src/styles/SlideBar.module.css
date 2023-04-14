@@ -95,6 +95,12 @@
     height: 50px;
 }
 
+@media only screen and (max-width: 320px){
+    .menu, .menu2{
+        height: 70vh;
+    }
+
+}
 @media only screen and (max-width: 425px){
     .modal .modal2{
         display: none;
